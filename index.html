@@ -1,92 +1,381 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A portfolio of certificates, hackathons, and technical events.">
-  <title>Certificate Portfolio | Basavaraj Kalakoti</title>
+  <meta name="description" content="Basavaraj Kalakoti's portfolio of technical achievements, certifications, hackathons and competitions.">
+  <title>Achievements & Certificates | Basavaraj Kalakoti</title>
+
   <style>
-    :root { color-scheme: dark; --bg:#0b1020; --panel:#121a2d; --text:#eef2ff; --muted:#a8b2c7; --line:#26334d; --accent:#8b9cff; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; background:radial-gradient(ellipse at top,#172443 0,#0b1020 48%); color:var(--text); }
-    .wrap { width:min(1100px,92%); margin:auto; }
-    header { padding:64px 0 38px; border-bottom:1px solid var(--line); }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:700; }
-    h1 { font-size:clamp(2.2rem,6vw,4rem); letter-spacing:-.045em; margin:12px 0; }
-    .intro { max-width:650px; color:var(--muted); line-height:1.7; font-size:1.04rem; margin:0; }
-    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-    .pill { border:1px solid var(--line); background:#121a2d99; color:#cbd5e1; border-radius:999px; padding:8px 13px; font-size:.82rem; }
-    main { padding:38px 0 70px; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:22px; }
-    h2 { margin:0; font-size:1.45rem; letter-spacing:-.02em; }
-    .count { color:var(--muted); font-size:.88rem; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(235px,1fr)); gap:18px; }
-    .card { background:linear-gradient(145deg,#151f35,#101729); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:transform .2s,border-color .2s; }
-    .card:hover { transform:translateY(-4px); border-color:#6578c5; }
-    .preview { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; background:#080d18; cursor:zoom-in; }
-    .card-body { padding:16px; }
-    .card h3 { font-size:1rem; line-height:1.4; margin:0 0 7px; }
-    .card p { color:var(--muted); font-size:.83rem; margin:0 0 13px; }
-    .view { color:#b6c2ff; text-decoration:none; font-size:.85rem; font-weight:650; }
-    .view:hover { text-decoration:underline; }
-    footer { border-top:1px solid var(--line); padding:22px 0 32px; color:var(--muted); font-size:.82rem; }
-    @media(max-width:560px) { header { padding-top:44px; } .section-head { align-items:start; flex-direction:column; } }
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --panel: #121a2d;
+      --text: #eef2ff;
+      --muted: #a8b2c7;
+      --line: #26334d;
+      --accent: #8b9cff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: radial-gradient(ellipse at top, #172443 0, #0b1020 48%);
+      color: var(--text);
+    }
+
+    .wrap {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      padding: 70px 0 45px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: -.045em;
+      margin: 12px 0;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.04rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: #121a2d99;
+      color: #cbd5e1;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: .82rem;
+    }
+
+    main { padding: 42px 0 70px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #151f35, #101729);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #6578c5;
+    }
+
+    .preview {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #080d18;
+      cursor: zoom-in;
+    }
+
+    .card-body { padding: 17px; }
+
+    .card h3 {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0 0 9px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .85rem;
+      line-height: 1.65;
+      margin: 0 0 14px;
+    }
+
+    .view {
+      color: #b6c2ff;
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 650;
+    }
+
+    .view:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 32px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    @media(max-width: 560px) {
+      header { padding-top: 45px; }
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="wrap">
-      <div class="eyebrow">Personal portfolio</div>
+      <div class="eyebrow">My Professional Portfolio</div>
+
       <h1>Basavaraj Kalakoti</h1>
-      <p class="intro">A collection of my certificates, hackathons, and technical events. This page brings my learning experiences and participation records together in one place.</p>
-      <div class="meta"><span class="pill">Certificates & achievements</span><span class="pill">Technology & events</span></div>
+
+      <p class="intro">
+        Welcome to my achievement portfolio. This space showcases my
+        journey through technology, innovation, competitions and continuous
+        learning. From presenting an FDI investment proposal to participating
+        in intercollegiate competitions, hackathons and technical events,
+        each experience has helped me develop my knowledge, creativity,
+        teamwork and problem-solving skills.
+      </p>
+
+      <div class="meta">
+        <span class="pill">Technical Achievements</span>
+        <span class="pill">Hackathons & Competitions</span>
+        <span class="pill">Certifications & Learning</span>
+      </div>
     </div>
   </header>
+
   <main class="wrap">
+
     <div class="section-head">
-      <h2>Certificates & Events</h2>
+      <h2>Achievements & Certificates</h2>
       <span class="count">10 entries</span>
     </div>
-    <section class="grid" aria-label="Certificate gallery">
+
+    <section class="grid" aria-label="Achievement and certificate gallery">
+
+      <!-- 1. FDI Investment Pitch -->
       <article class="card">
-  <a href="Commercian_finance_pitch.jpg.jpeg" target="_blank" rel="noopener">
-    <img class="preview"
-         src="Commercian_finance_pitch.jpg.jpeg"
-         alt="FDI investment pitch achievement certificate"
-         loading="lazy">
-  </a>
-  <div class="card-body">
-    <h3>FDI Investment Pitch</h3>
-    <p>Pitched an investment proposal focused on Foreign Direct Investment (FDI) and secured 2nd place in the competition.</p>
-    <a class="view" href="Commercian_finance_pitch.jpg.jpeg" target="_blank" rel="noopener">
-      View certificate ↗
-    </a>
-  </div>
-</article>
+        <a href="Commercian_finance_pitch.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Commercian_finance_pitch.jpg.jpeg"
+               alt="FDI investment pitch certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>FDI Investment Pitch – 2nd Place</h3>
+          <p>
+            Presented an investment proposal focused on Foreign Direct
+            Investment (FDI) and secured 2nd place in the competition.
+          </p>
+          <a class="view" href="Commercian_finance_pitch.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 2. Dharwad Tech Event -->
       <article class="card">
-  <a href="Dharwad_tech_event.jpg.jpeg" target="_blank" rel="noopener">
-    <img class="preview"
-         src="Dharwad_tech_event.jpg.jpeg"
-         alt="Dharwad Tech Event Runner-Up achievement"
-         loading="lazy">
-  </a>
-  <div class="card-body">
-    <h3>Dharwad Tech Event – Runner-Up</h3>
-    <p>Achieved Runner-Up position representing my college in an intercollegiate competition featuring technical and non-technical events.</p>
-    <a class="view" href="Dharwad_tech_event.jpg.jpeg" target="_blank" rel="noopener">
-      View certificate ↗
-    </a>
-  </div>
-</article>
-      <article class="card"><a href="Java_FullStack.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="Java_FullStack.jpg.jpeg" alt="Java Full Stack certificate" loading="lazy"></a><div class="card-body"><h3>Java Full Stack</h3><p>Technical learning</p><a class="view" href="Java_FullStack.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="Kalarava_Hackathon.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="Kalarava_Hackathon.jpg.jpeg" alt="Kalarava hackathon certificate" loading="lazy"></a><div class="card-body"><h3>Kalarava Hackathon</h3><p>Hackathon</p><a class="view" href="Kalarava_Hackathon.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="Kalarava_compiler_clash.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="Kalarava_compiler_clash.jpg.jpeg" alt="Kalarava compiler clash certificate" loading="lazy"></a><div class="card-body"><h3>Kalarava Compiler Clash</h3><p>Technical competition</p><a class="view" href="Kalarava_compiler_clash.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="Machine_Learning.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="Machine_Learning.jpg.jpeg" alt="Machine learning certificate" loading="lazy"></a><div class="card-body"><h3>Machine Learning</h3><p>Technical learning</p><a class="view" href="Machine_Learning.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="National_level_hackathon.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="National_level_hackathon.jpg.jpeg" alt="National level hackathon certificate" loading="lazy"></a><div class="card-body"><h3>National-Level Hackathon</h3><p>Hackathon</p><a class="view" href="National_level_hackathon.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="UI_UX.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="UI_UX.jpg.jpeg" alt="UI UX certificate" loading="lazy"></a><div class="card-body"><h3>UI / UX</h3><p>Design learning</p><a class="view" href="UI_UX.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
-      <article class="card"><a href="UI_clash.jpg.jpeg" target="_blank" rel="noopener"><img class="preview" src="UI_clash.jpg.jpeg" alt="UI clash certificate" loading="lazy"></a><div class="card-body"><h3>UI Clash</h3><p>Design competition</p><a class="view" href="UI_clash.jpg.jpeg" target="_blank" rel="noopener">View certificate ↗</a></div></article>
+        <a href="Dharwad_tech_event.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Dharwad_tech_event.jpg.jpeg"
+               alt="Dharwad Tech Event Runner-Up certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Dharwad Tech Event – Runner-Up</h3>
+          <p>
+            Represented my college in an intercollegiate competition
+            involving technical and non-technical events, where our
+            college secured the Runner-Up position.
+          </p>
+          <a class="view" href="Dharwad_tech_event.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 3. Elixate Tech Event -->
+      <article class="card">
+        <a href="Elixate_tech_event.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Elixate_tech_event.jpg.jpeg"
+               alt="Elixate Tech Event certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Elixate Tech Event</h3>
+          <p>
+            Participation in a technology-focused event, gaining exposure
+            to technical activities and collaborative learning.
+          </p>
+          <a class="view" href="Elixate_tech_event.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 4. Java Full Stack -->
+      <article class="card">
+        <a href="Java_FullStack.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Java_FullStack.jpg.jpeg"
+               alt="Java Full Stack certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Java Full Stack</h3>
+          <p>
+            Technical learning focused on Java Full Stack development
+            and software development concepts.
+          </p>
+          <a class="view" href="Java_FullStack.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 5. Kalarava Hackathon -->
+      <article class="card">
+        <a href="Kalarava_Hackathon.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Kalarava_Hackathon.jpg.jpeg"
+               alt="Kalarava Hackathon certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Kalarava Hackathon</h3>
+          <p>
+            Participated in a hackathon environment involving
+            problem-solving, innovation and collaborative work.
+          </p>
+          <a class="view" href="Kalarava_Hackathon.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 6. Compiler Clash -->
+      <article class="card">
+        <a href="Kalarava_compiler_clash.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Kalarava_compiler_clash.jpg.jpeg"
+               alt="Kalarava Compiler Clash certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Kalarava Compiler Clash</h3>
+          <p>
+            Participated in a technical competition focused on
+            programming and logical problem-solving.
+          </p>
+          <a class="view" href="Kalarava_compiler_clash.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 7. Machine Learning -->
+      <article class="card">
+        <a href="Machine_Learning.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="Machine_Learning.jpg.jpeg"
+               alt="Machine Learning certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>Machine Learning</h3>
+          <p>
+            Learning experience in Machine Learning and its applications
+            in technology and intelligent systems.
+          </p>
+          <a class="view" href="Machine_Learning.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 8. National Level Hackathon -->
+      <article class="card">
+        <a href="National_level_hackathon.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="National_level_hackathon.jpg.jpeg"
+               alt="National-level Hackathon certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>National-Level Hackathon</h3>
+          <p>
+            Participated in a national-level hackathon, gaining exposure
+            to innovation, teamwork and competitive problem-solving.
+          </p>
+          <a class="view" href="National_level_hackathon.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 9. UI/UX -->
+      <article class="card">
+        <a href="UI_UX.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="UI_UX.jpg.jpeg"
+               alt="UI UX certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>UI / UX</h3>
+          <p>
+            Explored user interface and user experience design concepts
+            with an emphasis on usability and visual design.
+          </p>
+          <a class="view" href="UI_UX.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
+      <!-- 10. UI Clash -->
+      <article class="card">
+        <a href="UI_clash.jpg.jpeg" target="_blank" rel="noopener">
+          <img class="preview" src="UI_clash.jpg.jpeg"
+               alt="UI Clash certificate" loading="lazy">
+        </a>
+        <div class="card-body">
+          <h3>UI Clash</h3>
+          <p>
+            Participated in a UI-focused competition involving
+            creativity, interface design and visual problem-solving.
+          </p>
+          <a class="view" href="UI_clash.jpg.jpeg"
+             target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </article>
+
     </section>
   </main>
-  <footer><div class="wrap">© 2026 Basavaraj Kalakoti · Certificate portfolio</div></footer>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Basavaraj Kalakoti · Professional Achievement Portfolio
+    </div>
+  </footer>
+
 </body>
 </html>
